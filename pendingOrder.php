@@ -22,9 +22,9 @@ else{
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-	<div class="container">
-  <a class="navbar-brand" href="index.php"><h3>Table Tennis Shop</h3></a>
+<nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+	<div class="container-fluid">
+  <a class="navbar-brand" href="index.php"><img src="./img/logo.png" style="height: 50px" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 		</button>
@@ -32,12 +32,11 @@ else{
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item color-me"><a class="nav-link" href="index.php">Home</a></li>
 				<li class="nav-item color-me"><a class="nav-link" href="shoplist.php">Shop</a></li>
-				<li class="nav-item color-me"><a class="nav-link" href="#">About Us</a></li>
 				<?php
-                if(isset($_SESSION['UserUser'])){ 
+                if(isset($_SESSION['UserUser'])){
                     $myuseruser =$_SESSION['UserUser'];
-                    echo "<li class='nav-item color-me'><a class='nav-link' href=#>". $myuseruser ."</a></li>";
-                    echo "<li class='nav-item color-me'><a class='nav-link' href=mycart.php>My Cart</a></li>";
+					echo "<li class='nav-item color-me'><a class='nav-link' href=#>". $myuseruser ."</a></li>";
+					echo "<li class='nav-item color-me'><a class='nav-link' href=mycart.php>My Cart</a></li>";
                     echo "<li class='nav-item color-me'><a class='nav-link' href=logout.php>Log-Out</a></li>";
                 }
                 else{
