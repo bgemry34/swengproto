@@ -16,10 +16,9 @@ session_start();
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-	<div class="container">
-  <a class="navbar-brand" href="index.php"><h3>Table Tennis Shop</h3></a>
+<nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+	<div class="container-fluid">
+  <a class="navbar-brand" href="index.php"><img src="./img/logo.png" style="height: 50px" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 		</button>
@@ -27,12 +26,11 @@ session_start();
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item color-me"><a class="nav-link" href="index.php">Home</a></li>
 				<li class="nav-item color-me"><a class="nav-link" href="shoplist.php">Shop</a></li>
-				<li class="nav-item color-me"><a class="nav-link" href="#">About Us</a></li>
 				<?php
                 if(isset($_SESSION['UserUser'])){
                     $myuseruser =$_SESSION['UserUser'];
-                    echo "<li class='nav-item color-me'><a class='nav-link' href=#>". $myuseruser ."</a></li>";
-                    echo "<li class='nav-item color-me'><a class='nav-link' href=mycart.php>My Cart</a></li>";
+					echo "<li class='nav-item color-me'><a class='nav-link' href=#>". $myuseruser ."</a></li>";
+					echo "<li class='nav-item color-me'><a class='nav-link' href=mycart.php>My Cart</a></li>";
                     echo "<li class='nav-item color-me'><a class='nav-link' href=logout.php>Log-Out</a></li>";
                 }
                 else{
@@ -67,7 +65,7 @@ session_start();
                     $productId= $rec['productId'];
                     echo "<li class='list-group-item col-xs-12 col-md-12'>
                     <div class=row>
-                    <img class='col-md-2 col-xs-2 w-25 h-25 hidden-xs-down' src=$productimage>
+                    <img class='col-md-2 col-xs-2 w-25 h-25 hidden-xs-down' src=img/productImages/$productimage>
                     <p class='col-md-4 m-auto'>$productname</p>
                     <div class='col-md-2 m-auto'><input type=text disabled class=form-control style='width: 90px; background-color: #f4f4f4;' value=$qty></div>
                     <div class='col-md-3 m-auto'>Price: &#8369;$price</div>
